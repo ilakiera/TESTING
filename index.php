@@ -18,7 +18,6 @@
         <p>Sebarang pertanyaan boleh emel kepada:</p>
         <a href="mailto:mcc@mohe.gov.my">mcc@mohe.gov.my</a>
     </div>
-</article>
 
 
 
