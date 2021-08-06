@@ -1,11 +1,33 @@
 
+// Countdown timer for redirecting to another URL after several seconds
 
-<head>
-  <meta http-equiv="refresh" content="5; URL=https://www.bitdegree.org/" />
-</head>
-<body>
-  <p>If you are not redirected in five seconds, <a href="https://www.bitdegree.org/">click here</a>.</p>
-</body>
+var seconds = 7; // seconds for HTML
+var foo; // variable for clearInterval() function
+
+function redirect() {
+    document.location.href = 'http://bubencode.com';
+}
+
+function updateSecs() {
+    document.getElementById("seconds").innerHTML = seconds;
+    seconds--;
+    if (seconds == -1) {
+        clearInterval(foo);
+        redirect();
+    }
+}
+
+function countdownTimer() {
+    foo = setInterval(function () {
+        updateSecs()
+    }, 1000);
+}
+
+countdownTimer();
+
+<p>You should be automatically redirected in <span id="seconds">7</span> seconds.
+</p>
+
 
 
 
